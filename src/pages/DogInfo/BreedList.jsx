@@ -13,7 +13,7 @@ export default function BreedList() {
 
         const options = {
             method: "GET",
-            url: "https://dog-info-site-backend.onrender.com"
+            url: "https://dog-info-site-backend.onrender.com/images/search"
         }
 
         axios.request(options)
