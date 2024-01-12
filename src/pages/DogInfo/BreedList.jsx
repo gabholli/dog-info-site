@@ -13,7 +13,7 @@ export default function BreedList() {
 
         const options = {
             method: "GET",
-            url: "https://dog-info-site-backend.onrender.com/"
+            url: "https://dog-info-site-backend.onrender.com/breeds"
         }
 
         axios.request(options)
@@ -27,5 +27,25 @@ export default function BreedList() {
 
     }, [])
 
-    return <h1>Breeds here</h1>
+    const dogBreedList = dogData?.map(dog => {
+        return (
+            <div>
+                <Link
+                    className="hover:underline"
+                >
+                    {dog.name}
+                </Link>
+            </div>
+        )
+    })
+
+    return (
+        <div className="flex flex-col justify-center items-center p-8 gap-y-8">
+            <h1 className="font-bold text-2xl">Select a breed:</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
+                gap-4">
+                {dogBreedList}
+            </div>
+        </div>
+    )
 }
