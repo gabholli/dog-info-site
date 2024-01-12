@@ -29,10 +29,18 @@ export default function BreedList() {
 
     const dogBreedList = dogData?.map(dog => {
         return (
-            <div>
+            <div
+                className="text-center flex items-center justify-center"
+                key={dog.id}>
                 <Link
                     className="hover:underline"
                 >
+                    <img
+                        className="size-80 object-cover"
+                        src={dog.image.url}>
+
+                    </img>
+
                     {dog.name}
                 </Link>
             </div>
