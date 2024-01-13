@@ -40,7 +40,7 @@ export default function BreedDetails() {
                 relative="path">
                 &larr; <span className="text-3xl">Back to breeds list</span>
             </Link>
-            <h1 className="text-4xl underline text-center">Facts about {dogData.name}s:</h1>
+            {dogData.name && <h1 className="text-4xl underline text-center">Facts about {dogData.name}s:</h1>}
             <div className="md:hidden flex flex-col justify-center items-center text-center px-4 
             py-8 gap-y-10">
                 {dogData.bred_for && <h2 className="text-3xl underline">Reasons for breeding:</h2>}
