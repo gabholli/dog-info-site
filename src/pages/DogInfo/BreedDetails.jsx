@@ -4,19 +4,19 @@ import axios from "axios"
 import { useParams, Link } from "react-router-dom"
 
 export default function BreedDetails() {
-    const { id } = useParams()
+    const { name } = useParams()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [dogData, setDogData] = useState([])
 
-    console.log(id)
+    console.log(name)
 
     useEffect(() => {
         setLoading(true)
 
         const options = {
             method: "GET",
-            url: `https://dog-info-site-backend.onrender.com/breeds/${id}`
+            url: `https://dog-info-site-backend.onrender.com/breeds/${name}`
         }
 
         axios.request(options)
@@ -32,9 +32,9 @@ export default function BreedDetails() {
                 setLoading(false)
             })
 
-    }, [id])
+    }, [name])
 
     return (
-        <h1></h1>
+        <h1>Facts about </h1>
     )
 }
