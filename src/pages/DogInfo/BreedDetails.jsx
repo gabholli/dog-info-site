@@ -59,34 +59,55 @@ export default function BreedDetails() {
                 {dogData.weight?.imperial && <p className="text-2xl">{dogData.weight?.imperial}</p>}
             </div>
             <table className="max-[767px]:hidden table-fixed border-collapse border border-black">
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Reasons for breeding:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.bred_for}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Breed group:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.breed_group}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Height in inches:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.height?.imperial}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Average life span:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.life_span}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Place(s) of origin:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.origin}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Temperament:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.temperament}</td>
-                </tr>
-                <tr>
-                    <td className="border border-black px-8 py-4 text-2xl">Weight in pounds:</td>
-                    <td className="border border-black px-8 py-4 text-2xl">{dogData.weight?.imperial}</td>
-                </tr>
+                {
+                    dogData.bred_for &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Reasons for breeding:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.bred_for}</td>
+                    </tr>
+                }
+                {
+                    dogData.breed_group &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Breed group:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.breed_group}</td>
+                    </tr>
+                }
+                {
+                    dogData.height?.imperial &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Height in inches:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.height?.imperial}</td>
+                    </tr>
+                }
+                {
+                    dogData.life_span &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Average life span:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.life_span}</td>
+                    </tr>
+                }
+                {
+                    dogData.origin &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Place(s) of origin:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.origin}</td>
+                    </tr>
+                }
+                {
+                    dogData.temperament &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Temperament:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.temperament}</td>
+                    </tr>
+                }
+                {
+                    dogData.weight?.imperial &&
+                    <tr>
+                        <td className="border border-black px-8 py-4 text-2xl">Weight in pounds:</td>
+                        <td className="border border-black px-8 py-4 text-2xl">{dogData.weight?.imperial}</td>
+                    </tr>
+                }
             </table>
         </div>
     )
