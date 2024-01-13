@@ -43,6 +43,7 @@ export default function BreedList() {
                 key={dog.id}>
                 <Link
                     className="hover:underline text-2xl"
+                    to={`${dog.id}`}
                 >
                     <img
                         className="size-80 object-cover mb-7"
