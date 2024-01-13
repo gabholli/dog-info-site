@@ -53,5 +53,14 @@ app.get('/breeds', (req, res) => {
 })
 
 app.get('/breeds/:id', (req, res) => {
-    res.json({ requestParams: req.params })
+    const options = {
+        method: 'GET',
+        url: `https://api.thedogapi.com/v1/breeds/${req.query.id}`,
+        headers: {
+            'x-api-key': process.env.VITE_SOME_KEY,
+            'X-api-host': 'api.thedogapi.com'
+        }
+    }
+
+    getRequest(options, res, req)
 })
