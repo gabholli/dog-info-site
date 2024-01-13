@@ -9,4 +9,6 @@ I created it using the following:
 - Tailwind CSS
 - Node.js
 
+I also used render.com to host the back end code(since it isn't possible to add a backend on Netlify).
+
 Go to https://dog-info-site.netlify.app/ to access the site!
