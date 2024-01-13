@@ -14,7 +14,7 @@ export default function BreedDetails() {
 
         const options = {
             method: "GET",
-            url: `https://dog-info-site-backend.onrender.com/breeds/${id}`
+            url: `https://dog-info-site-backend-9m7x.onrender.com/breeds/${id}`
         }
 
         axios.request(options)
