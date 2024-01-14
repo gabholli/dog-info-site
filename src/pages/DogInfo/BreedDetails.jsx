@@ -84,25 +84,25 @@ export default function BreedDetails() {
                 className="hover:underline text-center"
                 to=".."
                 relative="path">
-                &larr; <span className="text-3xl active:font-semibold">Back to breeds list</span>
+                &larr; <span className="text-3xl font-bold active:font-extrabold">Back to breeds list</span>
             </Link>
             <img className="size-80 lg:size-1/2 object-cover" src={imageData[0]?.url}></img>
-            <h1 className="text-4xl underline text-center">Facts about {dogData.name}s:</h1>
+            <h1 className="text-4xl underline text-center font-bold">Facts about {dogData.name}s:</h1>
             <div className="md:hidden flex flex-col justify-center items-center text-center px-4 
             py-8 gap-y-10">
-                {dogData.bred_for && <h2 className="text-3xl underline">Reasons for breeding:</h2>}
+                {dogData.bred_for && <h2 className="text-3xl underline font-semibold">Reasons for breeding:</h2>}
                 {dogData.bred_for && <p className="text-2xl">{dogData.bred_for}</p>}
-                {dogData.breed_group && <h2 className="text-3xl underline">Breed group:</h2>}
+                {dogData.breed_group && <h2 className="text-3xl underline font-semibold">Breed group:</h2>}
                 {dogData.breed_group && <p className="text-3xl">{dogData.breed_group}</p>}
-                {dogData.height?.imperial && <h2 className="text-3xl underline">Height in inches:</h2>}
+                {dogData.height?.imperial && <h2 className="text-3xl underline font-semibold">Height in inches:</h2>}
                 {dogData.height?.imperial && <p className="text-2xl">{dogData.height?.imperial}</p>}
-                {dogData.life_span && <h2 className="text-3xl underline">Average life span:</h2>}
+                {dogData.life_span && <h2 className="text-3xl underline font-semibold">Average life span:</h2>}
                 {dogData.life_span && <p className="text-2xl">{dogData.life_span}</p>}
-                {dogData.origin && <h2 className="text-3xl underline">Place(s) of origin:</h2>}
+                {dogData.origin && <h2 className="text-3xl underline font-semibold">Place(s) of origin:</h2>}
                 {dogData.origin && <p className="text-2xl">{dogData.origin}</p>}
-                {dogData.temperament && <h2 className="text-3xl underline">Temperament:</h2>}
+                {dogData.temperament && <h2 className="text-3xl underline font-semibold">Temperament:</h2>}
                 {dogData.temperament && <p className="text-2xl">{dogData.temperament}</p>}
-                {dogData.weight?.imperial && <h2 className="text-3xl underline">Weight in pounds:</h2>}
+                {dogData.weight?.imperial && <h2 className="text-3xl underline font-semibold">Weight in pounds:</h2>}
                 {dogData.weight?.imperial && <p className="text-2xl">{dogData.weight?.imperial}</p>}
             </div>
             <table className="max-[767px]:hidden table-fixed border-collapse border border-black">
