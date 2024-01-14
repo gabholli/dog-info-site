@@ -38,7 +38,7 @@ export default function BreedDetails() {
 
         const options = {
             method: "GET",
-            url: `https://dog-info-site-backend-xuyl.onrender.com/images/search?breed_ids=${id}`
+            url: `https://dog-info-site-backend-xuyl.onrender.com/images/search?breed_ids=2`
         }
 
         axios.request(options)
@@ -77,8 +77,6 @@ export default function BreedDetails() {
             </div>
         )
     }
-
-    console.log(imageData)
 
     return (
         <div className="flex flex-col gap-y-12 p-8 justify-center items-center">
