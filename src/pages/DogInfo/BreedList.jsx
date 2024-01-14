@@ -18,7 +18,7 @@ export default function BreedList() {
 
         const options = {
             method: "GET",
-            url: "https://dog-info-site-backend-9m7x.onrender.com/breeds"
+            url: "https://dog-info-site-backend-xuyl.onrender.com/breeds"
         }
 
         axios.request(options)
@@ -45,11 +45,11 @@ export default function BreedList() {
                     className="hover:underline text-2xl"
                     to={`${dog.id}`}
                 >
-                    <img
+                    {/* <img
                         className="size-80 object-cover mb-7"
                         src={dog.image.url}>
 
-                    </img>
+                    </img> */}
                     {dog.name}
                 </Link>
             </div>
