@@ -65,10 +65,10 @@ app.get('/breeds/:id', (req, res) => {
     getRequest(options, res, req)
 })
 
-app.get('/images/:imageId', (req, res) => {
+app.get('/images/:breedId', (req, res) => {
     const options = {
         method: 'GET',
-        url: `https://api.thedogapi.com/v1/images/${req.params.imageId}`,
+        url: `https://api.thedogapi.com/v1/images/${req.params.breedId}`,
         headers: {
             'x-api-key': process.env.VITE_SOME_KEY,
             'X-api-host': 'api.thedogapi.com'

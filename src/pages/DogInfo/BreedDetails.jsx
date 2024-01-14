@@ -8,6 +8,7 @@ export default function BreedDetails() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [dogData, setDogData] = useState([])
+    const [imageData, setImageData] = useState([])
 
     useEffect(() => {
         setLoading(true)
@@ -21,6 +22,29 @@ export default function BreedDetails() {
             .then(response => {
                 console.log(response.data)
                 setDogData(response.data)
+            })
+            .catch(error => {
+                console.error(error)
+                setError(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+
+    }, [id])
+
+    useEffect(() => {
+        setLoading(true)
+
+        const options = {
+            method: "GET",
+            url: `https://dog-info-site-backend-xuyl.onrender.com/images/search?breed_id=${id}`
+        }
+
+        axios.request(options)
+            .then(response => {
+                console.log(response.data)
+                setImageData(response.data)
             })
             .catch(error => {
                 console.error(error)
@@ -62,6 +86,7 @@ export default function BreedDetails() {
                 relative="path">
                 &larr; <span className="text-3xl">Back to breeds list</span>
             </Link>
+            <img src={imageData[0]?.url}></img>
             <h1 className="text-4xl underline text-center">Facts about {dogData.name}s:</h1>
             <div className="md:hidden flex flex-col justify-center items-center text-center px-4 
             py-8 gap-y-10">
