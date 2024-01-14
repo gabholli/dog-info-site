@@ -65,7 +65,7 @@ app.get('/breeds/:id', (req, res) => {
     getRequest(options, res, req)
 })
 
-app.get('/images/search/', (req, res) => {
+app.get('/images/search?breed_id=:breedId', (req, res) => {
     const options = {
         method: 'GET',
         url: `https://api.thedogapi.com/v1/images/search?breed_id=${req.params.breedId}`,
