@@ -120,7 +120,7 @@ export default function BreedList() {
     return (
         <div className="flex flex-col justify-center items-center p-8 gap-y-8">
             <h1 className="font-bold text-2xl">Select a breed:</h1>
-            {/* <nav className="flex flex-col gap-y-6">
+            <nav className="flex flex-col gap-y-6">
                 {dogIds[0] && <h1 className="font-bold text-xl text-center">Pages:</h1>}
                 <ul className="list-none flex flex-wrap justify-center gap-x-8 md:gap-x-6 
                                     gap-y-4 cursor-pointer">
@@ -128,7 +128,7 @@ export default function BreedList() {
                         tenItemList
                     }
                 </ul>
-            </nav> */}
+            </nav>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
                 gap-8">
                 {currentItems}
