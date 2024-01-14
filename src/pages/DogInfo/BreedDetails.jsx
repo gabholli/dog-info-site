@@ -84,7 +84,7 @@ export default function BreedDetails() {
                 className="hover:underline text-center"
                 to=".."
                 relative="path">
-                &larr; <span className="text-3xl">Back to breeds list</span>
+                &larr; <span className="text-3xl active:font-semibold">Back to breeds list</span>
             </Link>
             <img className="size-80 lg:size-1/2 object-cover" src={imageData[0]?.url}></img>
             <h1 className="text-4xl underline text-center">Facts about {dogData.name}s:</h1>

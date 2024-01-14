@@ -42,7 +42,7 @@ export default function BreedList() {
                 className="text-center"
                 key={dog.id}>
                 <Link
-                    className="hover:underline text-2xl"
+                    className="hover:underline active:font-semibold text-2xl"
                     to={`${dog.id}`}
                 >
                     {/* <img
@@ -77,7 +77,7 @@ export default function BreedList() {
     const tenItemList = pageNumbers.map(number => {
         return (
             <li
-                className="hover:underline active:font-bold size-8 bg-sky-300 flex
+                className="hover:underline active:font-semibold size-8 bg-sky-300 flex
                 justify-center items-center rounded"
                 key={number}
             >
