@@ -65,21 +65,21 @@ app.get('/breeds/:id', (req, res) => {
     getRequest(options, res, req)
 })
 
-// app.get('/images/search', (req, res) => {
-//     let query = req.query
-//     const options = {
-//         method: 'GET',
-//         url: `https://api.thedogapi.com/v1/images/search?breed_id=${query}`,
-//         headers: {
-//             'x-api-key': process.env.VITE_SOME_KEY,
-//             'X-api-host': 'api.thedogapi.com'
-//         }
-//     }
-
-//     getRequest(options, res, req)
-// })
-
 app.get('/images/search', (req, res) => {
     let query = req.query
-    res.send(query)
+    const options = {
+        method: 'GET',
+        url: `https://api.thedogapi.com/v1/images/search?breed_id=${query}`,
+        headers: {
+            'x-api-key': process.env.VITE_SOME_KEY,
+            'X-api-host': 'api.thedogapi.com'
+        }
+    }
+
+    getRequest(options, res, req)
 })
+
+// app.get('/images/search', (req, res) => {
+//     let query = req.query
+//     res.send(query)
+// })
