@@ -38,7 +38,7 @@ export default function BreedDetails() {
 
         const options = {
             method: "GET",
-            url: `https://dog-info-site-backend-xuyl.onrender.com/images/search?breed_id=${id}`
+            url: `https://dog-info-site-backend-xuyl.onrender.com/images/search?breed_ids=2`
         }
 
         axios.request(options)
@@ -78,6 +78,8 @@ export default function BreedDetails() {
         )
     }
 
+    console.log(imageData)
+
     return (
         <div className="flex flex-col gap-y-12 p-8 justify-center items-center">
             <Link
@@ -106,55 +108,57 @@ export default function BreedDetails() {
                 {dogData.weight?.imperial && <p className="text-2xl">{dogData.weight?.imperial}</p>}
             </div>
             <table className="max-[767px]:hidden table-fixed border-collapse border border-black">
-                {
-                    dogData.bred_for &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Reasons for breeding:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.bred_for}</td>
-                    </tr>
-                }
-                {
-                    dogData.breed_group &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Breed group:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.breed_group}</td>
-                    </tr>
-                }
-                {
-                    dogData.height?.imperial &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Height in inches:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.height?.imperial}</td>
-                    </tr>
-                }
-                {
-                    dogData.life_span &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Average life span:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.life_span}</td>
-                    </tr>
-                }
-                {
-                    dogData.origin &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Place(s) of origin:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.origin}</td>
-                    </tr>
-                }
-                {
-                    dogData.temperament &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Temperament:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.temperament}</td>
-                    </tr>
-                }
-                {
-                    dogData.weight?.imperial &&
-                    <tr>
-                        <td className="border border-black px-8 py-4 text-2xl">Weight in pounds:</td>
-                        <td className="border border-black px-8 py-4 text-2xl">{dogData.weight?.imperial}</td>
-                    </tr>
-                }
+                <tbody>
+                    {
+                        dogData.bred_for &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Reasons for breeding:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.bred_for}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.breed_group &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Breed group:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.breed_group}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.height?.imperial &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Height in inches:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.height?.imperial}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.life_span &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Average life span:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.life_span}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.origin &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Place(s) of origin:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.origin}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.temperament &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Temperament:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.temperament}</td>
+                        </tr>
+                    }
+                    {
+                        dogData.weight?.imperial &&
+                        <tr>
+                            <td className="border border-black px-8 py-4 text-2xl">Weight in pounds:</td>
+                            <td className="border border-black px-8 py-4 text-2xl">{dogData.weight?.imperial}</td>
+                        </tr>
+                    }
+                </tbody>
             </table>
         </div>
     )
