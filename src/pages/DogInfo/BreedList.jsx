@@ -10,7 +10,7 @@ export default function BreedList() {
     const [dogData, setDogData] = useState([])
 
     const [currentPage, setCurrentPage] = useState(1)
-    const [itemsPerPage, setItemsPerPage] = useState(43)
+    const [itemsPerPage, setItemsPerPage] = useState(44)
     const [activePage, setActivePage] = useState(1)
 
     useEffect(() => {
@@ -77,7 +77,7 @@ export default function BreedList() {
     const tenItemList = pageNumbers.map(number => {
         return (
             <li
-                className="hover:underline size-8 bg-sky-300 flex
+                className="hover:underline active:font-bold size-8 bg-sky-300 flex
                 justify-center items-center rounded"
                 key={number}
             >
