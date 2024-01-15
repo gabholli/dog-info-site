@@ -93,7 +93,7 @@ export default function BreedDetails() {
                 {dogData.bred_for && <h2 className="text-3xl underline font-semibold">Reasons for breeding:</h2>}
                 {dogData.bred_for && <p className="text-2xl">{dogData.bred_for}</p>}
                 {dogData.breed_group && <h2 className="text-3xl underline font-semibold">Breed group:</h2>}
-                {dogData.breed_group && <p className="text-3xl">{dogData.breed_group}</p>}
+                {dogData.breed_group && <p className="text-2xl">{dogData.breed_group}</p>}
                 {dogData.height?.imperial && <h2 className="text-3xl underline font-semibold">Height in inches:</h2>}
                 {dogData.height?.imperial && <p className="text-2xl">{dogData.height?.imperial}</p>}
                 {dogData.life_span && <h2 className="text-3xl underline font-semibold">Average life span:</h2>}
