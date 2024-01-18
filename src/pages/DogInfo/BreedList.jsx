@@ -10,7 +10,7 @@ export default function BreedList() {
     const [dogData, setDogData] = useState([])
 
     const [currentPage, setCurrentPage] = useState(1)
-    const [itemsPerPage, setItemsPerPage] = useState(44)
+    const [itemsPerPage, setItemsPerPage] = useState(12)
     const [activePage, setActivePage] = useState(1)
 
     useEffect(() => {
@@ -45,11 +45,11 @@ export default function BreedList() {
                     className="hover:underline active:font-semibold text-2xl"
                     to={`${dog.id}`}
                 >
-                    {/* <img
+                    <img
                         className="size-80 object-cover mb-7"
                         src={dog.image.url}>
 
-                    </img> */}
+                    </img>
                     {dog.name}
                 </Link>
             </div>
