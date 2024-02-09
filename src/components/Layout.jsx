@@ -6,7 +6,7 @@ import Footer from "./Footer"
 export default function Layout() {
     return (
         <div className="font-arial bg-sky-100 grid grid-rows-[auto_1fr_auto] 
-        grid-cols-1 w-full h-svh">
+        grid-cols-1 w-full h-screen">
             <Header />
             <Outlet />
             <Footer />
