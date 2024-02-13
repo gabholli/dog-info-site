@@ -8,7 +8,11 @@ export default {
     fontFamily: {
       'arial': ['Arial', 'Helvetica', 'sans-serif'],
     },
-    extend: {}
+    extend: {
+      minHeight: {
+        screen: ["100vh", "100svh"]
+      }
+    }
   },
   plugins: [],
 }
