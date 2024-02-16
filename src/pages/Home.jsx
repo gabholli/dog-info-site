@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Home() {
     return (
-        <div className="flex flex-col justify-center items-center gap-y-12">
+        <div className="flex flex-col justify-center items-center gap-y-12 px-4">
             <h1 className="text-center text-4xl">Dog Information Site</h1>
             <p className="text-center text-2xl">Find information about your favorite breed</p>
             <Link
