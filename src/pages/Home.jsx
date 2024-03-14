@@ -7,7 +7,7 @@ export default function Home() {
             <h1 className="text-center text-4xl">Dog Information Site</h1>
             <p className="text-center text-2xl">Find information about your favorite breed</p>
             <Link
-                className="bg-sky-300 px-4 py-2 rounded text-xl hover:underline"
+                className="bg-neutral-100 px-4 py-2 rounded text-xl hover:underline"
                 to="breeds"
             >
                 Find dog information

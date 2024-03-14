@@ -77,7 +77,7 @@ export default function BreedList() {
     const tenItemList = pageNumbers.map(number => {
         return (
             <li
-                className="hover:underline active:font-semibold size-8 bg-sky-300 flex
+                className="hover:underline active:font-semibold size-8 bg-neutral-100 flex
                 justify-center items-center rounded"
                 key={number}
             >
