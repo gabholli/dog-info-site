@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 export default function NotFound() {
     return (
         <div className="flex flex-col justify-center items-center
-            gap-y-8 px-2">
+            gap-y-8 px-2 bg-clouds bg-cover bg-center">
             <h1 className="text-center text-3xl">
                 Sorry, the page you were looking for was not found
             </h1>
-            <Link to="/" className="bg-neutral-100 px-4 py-2 rounded text-xl hover:underline">
+            <Link to="/" className="bg-slate-300 px-4 py-2 rounded text-xl hover:underline">
                 Return to home
             </Link>
         </div>

@@ -11,6 +11,9 @@ export default {
     extend: {
       minHeight: {
         screen: ["100vh", "100svh"]
+      },
+      backgroundImage: {
+        "clouds": "url('/images/clouds.jpg')"
       }
     }
   },

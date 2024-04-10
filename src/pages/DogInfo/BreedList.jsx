@@ -77,7 +77,7 @@ export default function BreedList() {
     const tenItemList = pageNumbers.map(number => {
         return (
             <li
-                className="hover:underline active:font-semibold size-8 bg-neutral-100 flex
+                className="hover:underline active:font-semibold size-8 bg-slate-300 flex
                 justify-center items-center rounded"
                 key={number}
             >
@@ -118,7 +118,8 @@ export default function BreedList() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center p-8 gap-y-8">
+        <div className="flex flex-col justify-center items-center p-8 gap-y-8 bg-clouds
+            bg-cover bg-center">
             <h1 className="font-bold text-2xl">Select a breed:</h1>
             <nav className="flex flex-col gap-y-6">
                 {dogIds[0] && <h1 className="font-bold text-xl text-center">Pages:</h1>}
