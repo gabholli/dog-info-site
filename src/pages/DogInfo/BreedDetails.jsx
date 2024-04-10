@@ -86,7 +86,7 @@ export default function BreedDetails() {
                 relative="path">
                 &larr; <span className="text-3xl font-bold active:font-extrabold">Back to breeds list</span>
             </Link>
-            <img className="size-80 lg:size-1/2 object-cover" src={imageData[0]?.url}></img>
+            <img className="size-80 lg:size-1/2 object-cover rounded-xl" src={imageData[0]?.url}></img>
             <h1 className="text-4xl underline text-center font-bold">{dogData.name} facts:</h1>
             <div className="md:hidden flex flex-col justify-center items-center text-center px-4 
             py-8 gap-y-10">

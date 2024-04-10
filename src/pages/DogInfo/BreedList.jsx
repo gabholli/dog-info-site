@@ -46,7 +46,7 @@ export default function BreedList() {
                     to={`${dog.id}`}
                 >
                     <img
-                        className="size-80 object-cover mb-7"
+                        className="size-80 object-cover mb-7 rounded-xl"
                         src={dog.image.url}>
 
                     </img>
