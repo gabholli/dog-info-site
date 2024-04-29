@@ -23,7 +23,5 @@ I also used render.com to host the back end code.
 ## Authors
 Gabe Hollifield
 
-## Version History
-
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
