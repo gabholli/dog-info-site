@@ -79,8 +79,7 @@ export default function BreedDetails() {
     }
 
     return (
-        <div className="flex flex-col gap-y-12 p-8 justify-center items-center
-            bg-clouds bg-cover bg-center">
+        <div className="flex flex-col gap-y-12 p-8 justify-center items-center">
             <Link
                 className="hover:underline text-center"
                 to=".."

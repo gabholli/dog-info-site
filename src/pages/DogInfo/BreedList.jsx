@@ -118,7 +118,7 @@ export default function BreedList() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center p-8 gap-y-8 bg-clouds
+        <div className="flex flex-col justify-center items-center p-8 gap-y-8
             bg-cover bg-center">
             <h1 className="font-bold text-2xl">Select a breed:</h1>
             <nav className="flex flex-col gap-y-6">
