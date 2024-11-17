@@ -67,16 +67,16 @@ export default function BreedDetails() {
         )
     }
 
-    // if (error) {
-    //     return (
-    //         <div className="flex flex-col justify-center items-center">
-    //             <h1 className=" text-3xl mb-8 text-center mt-8">There was an error loading this page...</h1>
-    //             <Link to="/" className="bg-sky-300 px-4 py-2 rounded text-xl hover:underline">
-    //                 Return to home
-    //             </Link>
-    //         </div>
-    //     )
-    // }
+    if (error) {
+        return (
+            <div className="flex flex-col justify-center items-center">
+                <h1 className=" text-3xl mb-8 text-center mt-8">There was an error loading this page...</h1>
+                <Link to="/" className="bg-sky-300 px-4 py-2 rounded text-xl hover:underline">
+                    Return to home
+                </Link>
+            </div>
+        )
+    }
 
     return (
         <div className="flex flex-col gap-y-12 p-8 justify-center items-center">
